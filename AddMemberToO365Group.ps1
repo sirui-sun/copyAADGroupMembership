@@ -1,7 +1,6 @@
+# Setup steps:
 # > Set-ExecutionPolicy remotesigned
 # > Install-Module -Name AzureADPreview
-
-# Azure AD v2 PowerShell Quickstart Connect
 
 "This script takes a SOURCE group and a TARGET group."
 "The TARGET group's membership is made to exactly match the SOURCE group's."
@@ -13,7 +12,7 @@ $membersAdded = 0
 $membersRemoved = 0
 
 # Connect with Credential Object
-#$AzureAdCred = Get-Credential
+$AzureAdCred = Get-Credential
 Connect-AzureAD -Credential $AzureAdCred | out-null
 
 # Get groups and their members
